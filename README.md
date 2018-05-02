@@ -16,7 +16,10 @@ The project is a Raspberry Pi Web controlled home security system. It has three 
 - [Class D Audio Amp](https://os.mbed.com/users/4180_1/notebook/tpa2005d1-class-d-audio-amp/)
 
 ## Pictures
-<img align="left" width="250" height="250" src=/images/1.jpg>
+<img align="left" width="200" height="300" src=/images/1.jpg>
+<img align="center" width="200" height="300" src=/images/2.jpg>
+<img align="right" width="200" height="300" src=/images/3.jpg>
+
 
 ## Demo Video
 [![Demo](https://img.youtube.com/vi/x7tUQa1mYeM/0.jpg)](https://www.youtube.com/watch?v=x7tUQa1mYeM)
