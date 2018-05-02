@@ -4,5 +4,4 @@
 The project is a Raspberry Pi Web controlled home security system. It has three parts which are gateway control, user recognition, and Web GUI control. The first part allows user to unlock the door (represented by solenoid) by verifying his finger prints. User recognition part will send the user a email with snapshot for warning if it detects motion. Web GUI is designed to make user able to get live stream video from multiple Raspberry Pi Cameras, change shooting angles, and even take a picture by clicking a button. If the user finds a invader, he can send different sound alerts to home from the Web GUI.
 
 ## Flow Diagram
-![](Flow Diagram.jpg)
-[![Watch the video](https://img.youtube.com/vi/VID/0.jpg)](https://youtu.be/b65ucAXas-0)
+![flow diagram](https://user-images.githubusercontent.com/25835420/39506651-064482c6-4da8-11e8-8052-99cbfb08e145.jpg)
