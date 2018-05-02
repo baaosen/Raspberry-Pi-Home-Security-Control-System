@@ -5,3 +5,7 @@ The project is a Raspberry Pi Web controlled home security system. It has three 
 
 ## Flow Diagram
 ![flow diagram](https://user-images.githubusercontent.com/25835420/39506651-064482c6-4da8-11e8-8052-99cbfb08e145.jpg)
+
+## Components
+- [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+- [Raspberry Pi Camera Module V2](https://www.raspberrypi.org/products/camera-module-v2/)
