@@ -21,7 +21,7 @@ The project is a Raspberry Pi Web controlled home security system. It has three 
 - Raspberry Pi Camera setup, mbed connection, and website GUI
 - <img width="250" height="250" src=/images/6.jpg> <img width="250" height="250" src=/images/5.jpg> <img width="250" height="250" src=/images/7.jpg>
 - Terminal showing website traffic <img src=/images/8.jpg>
-- Website Console <img src=/images/9.jpg>
+- Website Console <img src=/images/9.JPG>
 
 ## Demo Video
 [![Demo](https://img.youtube.com/vi/x7tUQa1mYeM/0.jpg)](https://www.youtube.com/watch?v=x7tUQa1mYeM)
