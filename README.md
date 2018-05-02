@@ -5,3 +5,4 @@ The project is a Raspberry Pi Web controlled home security system. It has three 
 
 ## Flow Diagram
 ![](Flow Diagram.jpg)
+[![Watch the video](https://img.youtube.com/vi/VID/0.jpg)](https://youtu.be/b65ucAXas-0)
