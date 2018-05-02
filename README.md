@@ -16,6 +16,7 @@ The project is a Raspberry Pi Web controlled home security system. It has three 
 - [Class D Audio Amp](https://os.mbed.com/users/4180_1/notebook/tpa2005d1-class-d-audio-amp/)
 
 ## Pictures
+- fingerprint scanner setup and enrollment
 <img width="250" height="250" src=/images/4.jpg> <img width="250" height="250" src=/images/3.jpg> <img width="250" height="250" src=/images/2.jpg>
 
 
