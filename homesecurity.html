@@ -1,0 +1,130 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Home Security System Console</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <script>
+	    var current_cam = 0;
+            $(document).ready(function() {
+                $("#sound1").click(function(){
+                    $("#sound1").prop('disabled', true);
+                    $("#sound1").html('Sending Request..');
+                    var request = new XMLHttpRequest();
+                    request.open('GET', '/speaker1', false);
+                    request.send(null);
+                    if (request.status === 200) {
+                        console.log(request.responseText);
+                        $("#sound1").html('Processing..');
+                    } else {
+                        $("#sound1").prop('disabled', false);
+                        $("#sound1").html('Failed');
+                        return;
+                    }
+                    $("#sound1").prop('disabled', false);
+                    $("#sound1").html('Sound1');
+                });
+
+		$("#sound2").click(function(){
+                    $("#sound2").prop('disabled', true);
+                    $("#sound2").html('Sending Request..');
+                    var request = new XMLHttpRequest();
+                    request.open('GET', '/speaker2', false);
+                    request.send(null);
+                    if (request.status === 200) {
+                        console.log(request.responseText);
+                        $("#sound2").html('Processing..');
+                    } else {
+                        $("#sound2").prop('disabled', false);
+                        $("#sound2").html('Failed');
+                        return;
+                    }
+                    $("#sound2").prop('disabled', false);
+                    $("#sound2").html('Sound2');
+                });
+
+		$("#sound3").click(function(){
+                    $("#sound3").prop('disabled', true);
+                    $("#sound3").html('Sending Request..');
+                    var request = new XMLHttpRequest();
+                    request.open('GET', '/speaker3', false);
+                    request.send(null);
+                    if (request.status === 200) {
+                        console.log(request.responseText);
+                        $("#sound3").html('Processing..');
+                    } else {
+                        $("#sound3").prop('disabled', false);
+                        $("#sound3").html('Failed');
+                        return;
+                    }
+                    $("#sound3").prop('disabled', false);
+                    $("#sound3").html('Sound3');
+                });
+
+		$("#ledlight").click(function(){
+                    $("#ledlight").prop('disabled', true);
+                    $("#ledlight").html('Sending Request..');
+                    var request = new XMLHttpRequest();
+                    request.open('GET', '/ledlight', false);
+                    request.send(null);
+                    if (request.status === 200) {
+                        console.log(request.responseText);
+                        $("#ledlight").html('Processing..');
+                    } else {
+                        $("#ledlight").prop('disabled', false);
+                        $("#ledlight").html('Failed');
+                        return;
+                    }
+                    $("#ledlight").prop('disabled', false);
+                    $("#ledlight").html('LED Light');
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="container" style="padding: 20px;">
+            <div class="container" style="padding: 20px;" align = "center">
+                <strong>Camera Options:</Strong>
+                <button role="button" class="btn btn-sm btn-outline-dark" id="change angle" onclick = "changeangle()">Change Angle</button>
+		<script type = "text/javascript">
+		    function changeangle() {
+			if (current_cam == 0) {
+                            current_cam = 1;
+			    console.log("change cam 1");
+			    document.getElementById('videostream').src = "http://{{ip2_to_render}}:8080/?action=stream";
+			} else if (current_cam == 1) {
+			    current_cam = 0;
+			    console.log("change cam 0");
+			    document.getElementById('videostream').src = "http://{{ip1_to_render}}/?action=stream";
+			}
+		    }
+		</script>
+                <button role="button" class="btn btn-sm btn-outline-dark" id="take picture" onclick = "snapshot()">Take Picture</button><br/><br/>
+		<script type = "text/javascript">
+		    function snapshot() {
+			if (current_cam == 0) {
+			    window.open("http://{{ip1_to_render}}/?action=snapshot");
+			} else if (current_cam == 1) {
+			    window.open("http://{{ip2_to_render}}:8080/?action=snapshot");
+			}
+		    }
+		</script>
+                <strong>GPIO:</Strong>
+                <button role="button" class="btn btn-sm btn-outline-dark" id="ledlight">LED Light</button>
+                <button role="button" class="btn btn-sm btn-outline-dark" id="sound1">Sound1</button>
+                <button role="button" class="btn btn-sm btn-outline-dark" id="sound2">Sound2</button>
+                <button role="button" class="btn btn-sm btn-outline-dark" id="sound3">Sound3</button>
+            </div>
+            <h1 align="center">Security Camera System</h1>
+            <p align = center><iframe src="http://{{ip1_to_render}}/?action=stream" width="640" height="320" frameBorder="0" scrolling="no" id = "videostream"/>
+        </div></p>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
